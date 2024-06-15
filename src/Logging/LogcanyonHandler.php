@@ -12,8 +12,11 @@ use Monolog\LogRecord;
 class LogcanyonHandler extends AbstractProcessingHandler
 {
     protected Client $client;
+
     protected string $endpoint;
+
     protected string $siteId;
+
     protected string $siteSecretKey;
 
     public function __construct($endpoint, $siteId, $siteSecretKey, $level = Logger::DEBUG, bool $bubble = true)
@@ -38,7 +41,7 @@ class LogcanyonHandler extends AbstractProcessingHandler
                 ],
             ]);
         } catch (Exception $e) {
-            Log::channel('stack')->error('Failed to send log to Logcanyon: ' . $e->getMessage());
+            Log::channel('stack')->error('Failed to send log to Logcanyon: '.$e->getMessage());
         }
     }
 }

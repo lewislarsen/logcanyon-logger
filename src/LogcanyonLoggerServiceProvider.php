@@ -15,6 +15,7 @@ class LogcanyonLoggerServiceProvider extends ServiceProvider
             $log->extend('logcanyon', function ($app, $config) {
                 return (new CreateLogcanyonLogger())($config);
             });
+
             return $log;
         });
 

@@ -3,8 +3,8 @@
 namespace lewislarsen\LogcanyonLogger\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use lewislarsen\LogcanyonLogger\LogcanyonLoggerServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
